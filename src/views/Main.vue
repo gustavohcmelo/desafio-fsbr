@@ -1,14 +1,19 @@
 <template>
 <v-app>
-<router-view></router-view>
+  <Toolbar title="Cadastramento"/>
+  <ControlPainel />
 </v-app>
 </template>
 
 <script>
+import Toolbar from '@/components/Toolbar'
+import ControlPainel from '@/components/Control-Painel'
 
 export default {
   name: 'App',
-  components: { 
+  components: {
+    Toolbar,
+    ControlPainel
   },
 
   data: () => ({
