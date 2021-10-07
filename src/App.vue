@@ -10,10 +10,6 @@ export default {
   name: 'App',
   components: { 
   },
-
-  data: () => ({
-    title: 'Cadastramento'
-  }),
 };
 </script>
 

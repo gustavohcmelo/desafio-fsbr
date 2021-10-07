@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <Toolbar title="Inclusão"/>
+        <Toolbar title="Exclusão"/>
         <FormRemove />
     </v-app>
 </template>

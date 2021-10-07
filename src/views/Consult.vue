@@ -1,6 +1,6 @@
 <template>
     <v-app>
-        <Toolbar title="Inclusão"/>
+        <Toolbar title="Consultar"/>
         <FormConsult />
     </v-app>
 </template>
