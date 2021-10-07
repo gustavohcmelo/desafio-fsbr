@@ -75,6 +75,9 @@ export default {
                 this.message = response
                 this.form.cpf = ''
                 this.$swal("Sucesso", "Cadastro	 Atualizado	com Sucesso!", "success");
+
+                form = {'estado':'','nome':'','cpf':'','cidade':''}
+                this.form = {'estado':'','nome':'','cpf':'','cidade':''}
             })
             .catch((response) => {
                 this.message = response

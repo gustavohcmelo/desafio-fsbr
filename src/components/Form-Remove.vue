@@ -73,8 +73,6 @@ export default {
             this.$http.get('http://desafiodev.fsbr.com.br/api/cadastramentos/', {params: { cpf: form.cpf }})
             .then((response) => {
                 let items = JSON.parse(JSON.stringify(this.items))
-                console.log(items)
-                console.log(response.data[0].estado)
                 items.forEach((item) => {
                     if(item.value == response.data[0].estado){
                         this.form.estado = {
@@ -101,6 +99,9 @@ export default {
                 this.form.cpf = ''
                 this.message = response
                 this.$swal("Sucesso", "Cadastro Excluido com Sucesso!", "success");
+
+                form = {'estado':'','nome':'','cpf':'','cidade':''}
+                this.form = {'estado':'','nome':'','cpf':'','cidade':''}
             })
             .catch((response) => {
                 this.message = response

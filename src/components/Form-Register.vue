@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-      <v-form ref="form" lazy-validation>
+      <v-form id="formData" ref="form" lazy-validation>
         <v-col class="d-flex" cols="12" sm="12" v-model="form.estado">
             <v-select label="Estado" v-model="form.estado" :items="items" outlined ></v-select>
         </v-col>
@@ -8,7 +8,7 @@
             <v-text-field label="Nome" v-model="form.nome" maxlength="100" counter="100" outlined clearable ></v-text-field>
         </v-col>
         <v-col cols="12">
-            <v-text-field label="CPF" v-model="form.cpf" maxlength="11" counter="11" outlined clearable></v-text-field>
+            <v-text-field label="CPF" v-model.number="form.cpf" maxlength="11" counter="11" outlined clearable></v-text-field>
         </v-col>
         <v-col cols="12">
             <v-text-field label="Cidade" v-model="form.cidade" maxlength="50" counter="50"  outlined clearable></v-text-field>
@@ -69,11 +69,19 @@ export default {
                 return false;
             }
 
+            if(this.form.cpf.length < 11){
+                this.$swal("Atenção", "O CPF deve conter 11 caracteres!", "error");
+                return false;
+            }
+
             form.estado = form.estado.value
+
+            form = {'estado':'','nome':'','cpf':'','cidade':''}
+            this.form = {'estado':'','nome':'','cpf':'','cidade':''}
             
             this.$http.post('http://desafiodev.fsbr.com.br/api/cadastramentos', form)
             .then((response) => {
-                this.form = []
+                this.form = {'estado':'','nome':'','cpf':'','cidade':''}
                 this.message = response
                 this.$swal("Sucesso", "Cadastro Realizado com Sucesso!", "success");
             })
@@ -83,7 +91,6 @@ export default {
             })
         }
     }
-    
 }
 </script>
 
