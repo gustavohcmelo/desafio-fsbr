@@ -75,15 +75,15 @@ export default {
             }
 
             form.estado = form.estado.value
-
-            form = {'estado':'','nome':'','cpf':'','cidade':''}
-            this.form = {'estado':'','nome':'','cpf':'','cidade':''}
             
             this.$http.post('http://desafiodev.fsbr.com.br/api/cadastramentos', form)
             .then((response) => {
                 this.form = {'estado':'','nome':'','cpf':'','cidade':''}
                 this.message = response
                 this.$swal("Sucesso", "Cadastro Realizado com Sucesso!", "success");
+
+                form = {'estado':'','nome':'','cpf':'','cidade':''}
+                this.form = {'estado':'','nome':'','cpf':'','cidade':''}
             })
             .catch((response) => {
                 this.error = response
