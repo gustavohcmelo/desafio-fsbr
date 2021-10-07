@@ -9,14 +9,14 @@
             </div>
 
             <div class="btn-group">
-                <v-btn class="ma-2" outlined large fab color="indigo">
+                <v-btn @click="$router.push('update')" class="ma-2" outlined large fab color="indigo">
                     <v-icon>mdi-archive-refresh</v-icon>
                 </v-btn>
                 <h5>ALTERAR</h5>
             </div>
 
             <div class="btn-group">
-                <v-btn class="ma-2" outlined large fab color="indigo">
+                <v-btn @click="$router.push('remove')" class="ma-2" outlined large fab color="indigo">
                     <v-icon>mdi-delete</v-icon>
                 </v-btn>
                 <h5>EXCLUIR</h5>
@@ -24,14 +24,14 @@
         </v-row>
         <v-row  class="buttons-central">
             <div class="btn-group">
-                <v-btn class="ma-2" outlined large fab color="indigo">
+                <v-btn @click="$router.push('consult')" class="ma-2" outlined large fab color="indigo">
                     <v-icon>mdi-magnify</v-icon>
                 </v-btn>
                 <h5>CONSULTAR</h5>
             </div>
 
             <div class="btn-group">
-                <v-btn class="ma-2" outlined large fab color="indigo">
+                <v-btn @click="$router.push('list')" class="ma-2" outlined large fab color="indigo">
                     <v-icon>mdi-format-list-bulleted-square</v-icon>
                 </v-btn>
                 <h5>LISTAR</h5>
@@ -39,7 +39,7 @@
         </v-row>
         <v-row  class="buttons-central last-child">
             <div class="btn-group">
-                <v-btn color="error" dark large> Sair </v-btn>
+                <v-btn color="error" @click="close" dark large> Sair </v-btn>
             </div>
         </v-row>
   </div>
@@ -47,7 +47,12 @@
 
 <script>
 export default {
-    name: 'Control-Painel'
+    name: 'Control-Painel',
+    methods:{
+        close(){
+            window.location.href = 'https://fsbr.com.br/'
+        }
+    }
 
 }
 </script>

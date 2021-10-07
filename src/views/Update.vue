@@ -1,16 +1,19 @@
 <template>
     <v-app>
-        <Toolbar title="Inclusão"/>
-        <h1>REGISTER</h1>
+        <Toolbar title="Alteração"/>
+        <FormUpdate />
     </v-app>
 </template>
 
 <script>
 import Toolbar from '@/components/Toolbar'
+import FormUpdate from '@/components/Form-Update'
+
 export default {
     name: 'Update',
     components: {
-        Toolbar
+        Toolbar,
+        FormUpdate
     }
 }
 </script>

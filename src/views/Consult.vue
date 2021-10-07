@@ -1,16 +1,19 @@
 <template>
     <v-app>
         <Toolbar title="Inclusão"/>
-        <h1>REGISTER</h1>
+        <FormConsult />
     </v-app>
 </template>
 
 <script>
 import Toolbar from '@/components/Toolbar'
+import FormConsult from '@/components/Form-Consult'
+
 export default {
     name: 'Consult',
     components: {
-        Toolbar
+        Toolbar,
+        FormConsult
     }
 }
 </script>

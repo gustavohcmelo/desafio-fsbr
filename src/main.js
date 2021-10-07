@@ -9,8 +9,7 @@ Vue.prototype.$http = axios
 
 axios.defaults.headers.common = {
   'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYW1lIjoiRGV2IFRlc3RlciJ9.NqpLPdG-Vqvo2yq1aNivHfaM_o1iBIlL5jkrubdYYqo`,
-  'Access-Control-Allow-Origin': '*',
-  'Content-Type': 'application/x-www-form-urlencoded'
+  'Accept': 'application/json'
 }
 
 new Vue({

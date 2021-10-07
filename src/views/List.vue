@@ -1,16 +1,19 @@
 <template>
     <v-app>
-        <Toolbar title="Inclusão"/>
-        <h1>REGISTER</h1>
+        <Toolbar title="Listagem"/>
+        <ListItems />
     </v-app>
 </template>
 
 <script>
 import Toolbar from '@/components/Toolbar'
+import ListItems from '@/components/List-Items'
+
 export default {
     name: 'List',
     components: {
-        Toolbar
+        Toolbar,
+        ListItems
     }
 }
 </script>

@@ -3,6 +3,6 @@ module.exports = {
     'vuetify'
   ],
   devServer: {
-    proxy: 'http://desafiodev.fsbr.com.br/api'
+    proxy: 'http://desafiodev.fsbr.com.br/'
   }
 }
